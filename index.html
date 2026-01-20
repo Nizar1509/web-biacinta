@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Love untuk bia cinta❤️</title>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+    overflow: hidden;
+    text-align: center;
+}
+
+/* FOTO */
+.photo {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 0 25px rgba(255,0,120,.8);
+    animation: pulse 2s infinite;
+    margin-bottom: 20px;
+}
+
+/* LOVE TENGAH */
+.heart {
+    width: 110px;
+    height: 110px;
+    background: #ff2f6e;
+    position: relative;
+    transform: rotate(-45deg);
+    animation: beat 1s infinite;
+    margin-bottom: 20px;
+}
+.heart::before,
+.heart::after {
+    content: "";
+    width: 110px;
+    height: 110px;
+    background: #ff2f6e;
+    border-radius: 50%;
+    position: absolute;
+}
+.heart::before { top: -55px; left: 0; }
+.heart::after { left: 55px; top: 0; }
+
+/* TEKS */
+.text-box {
+    position: relative;
+}
+
+h1, h2 {
+    margin: 6px 0;
+    opacity: 0;
+    animation: textOpen 2s ease forwards, glow 2.5s infinite;
+}
+
+h2 { animation-delay: .3s; font-size: 22px; }
+h1 { animation-delay: .8s; font-size: 30px; }
+
+/* LOVE KELUAR DARI TEKS (DIPERBESAR) */
+.text-box span {
+    position: absolute;
+    font-size: 32px; /* BESAR */
+    animation: loveOut 3s linear infinite;
+    pointer-events: none;
+}
+.text-box span:nth-child(3) { left: 5%; animation-delay: 0s; }
+.text-box span:nth-child(4) { left: 25%; animation-delay: 1s; }
+.text-box span:nth-child(5) { left: 50%; animation-delay: 2s; }
+.text-box span:nth-child(6) { left: 75%; animation-delay: 3s; }
+.text-box span:nth-child(7) { left: 95%; animation-delay: 4s; }
+
+/* LOVE PINGGIR LAYAR (BESAR) */
+.edge-hearts span {
+    position: fixed;
+    font-size: 42px; /* SUPER BESAR */
+    animation: edgeFloat 6s linear infinite;
+    opacity: .9;
+}
+
+.edge-hearts span.left { left: 12px; }
+.edge-hearts span.right { right: 12px; }
+
+.edge-hearts span:nth-child(1) { top: 10%; animation-delay: 0s; }
+.edge-hearts span:nth-child(2) { top: 30%; animation-delay: 1s; }
+.edge-hearts span:nth-child(3) { top: 50%; animation-delay: 2s; }
+.edge-hearts span:nth-child(4) { top: 70%; animation-delay: 3s; }
+.edge-hearts span:nth-child(5) { top: 90%; animation-delay: 4s; }
+
+/* ANIMATIONS */
+@keyframes edgeFloat {
+    0% { transform: scale(.8); opacity: 0; }
+    50% { transform: scale(1.4); opacity: 1; }
+    100% { transform: scale(.8); opacity: 0; }
+}
+
+@keyframes loveOut {
+    0% { transform: translateY(0) scale(.6); opacity: 1; }
+    100% { transform: translateY(-150px) scale(1.4); opacity: 0; }
+}
+
+@keyframes textOpen {
+    0% { transform: scale(.2) translateY(30px); opacity: 0; }
+    100% { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+@keyframes glow {
+    0%,100% { text-shadow: 0 0 8px #fff, 0 0 16px #ff4d8d; }
+    50% { text-shadow: 0 0 16px #fff, 0 0 32px #ff9ac2; }
+}
+
+@keyframes beat {
+    0%,100% { transform: rotate(-45deg) scale(1); }
+    50% { transform: rotate(-45deg) scale(1.2); }
+}
+
+@keyframes pulse {
+    0%,100% { transform: scale(1); }
+    50% { transform: scale(1.07); }
+}
+</style>
+</head>
+
+<body>
+
+<img src="SABRIAMN.jpeg" class="photo" alt="Foto Cinta ❤️">
+
+<div class="heart"></div>
+
+<div class="text-box">
+    <h2>MY SWEETEST LOVE ❤️</h2>
+    <h1>SABRIA MUTIARA NASYWA 💕</h1>
+
+    <span>❤️</span>
+    <span>💖</span>
+    <span>💘</span>
+    <span>💞</span>
+    <span>❤️</span>
+</div>
+
+<div class="edge-hearts">
+    <span class="left">❤️</span>
+    <span class="left">💖</span>
+    <span class="left">💘</span>
+    <span class="right">💞</span>
+    <span class="right">❤️</span>
+</div>
+
+</body>
+</html>
+
+
+
+
+
